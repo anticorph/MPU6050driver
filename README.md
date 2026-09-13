@@ -21,7 +21,7 @@ DMA1 Stream6 for I2C1_TX).
 |--------------------|------------------------------------------------------------|
 | `mpu6050.h`        | Public API, register map, state machine types              |
 | `mpu6050.c`        | GPIO/I2C/DMA setup + the non-blocking driver implementation |
-| `main_example.c`   | Minimal wiring: NVIC, SysTick, main loop usage              |
+| `main.c`           | Minimal wiring: NVIC, SysTick, main loop usage              |
 
 ## Wiring
 
