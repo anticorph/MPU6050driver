@@ -8,7 +8,7 @@ IMU, built around:
   memory.
 - **A non-blocking state machine** for everything else (init sequence,
   sampling cadence). There is no `delay()` / `HAL_Delay()` anywhere in the
-  driver — the one genuinely time-based wait (the sensor's ~100 ms
+  driver - the one genuinely time-based wait (the sensor's ~100 ms
   power-up settle time) is a tick comparison you drive from your own
   SysTick, not a busy sleep.
 
@@ -90,7 +90,7 @@ To port:
 ## Known limitations / things to verify on your hardware
 
 - This was written and reviewed at the register-sequence level but not
-  compiled/flashed against physical hardware in this environment — please
+  compiled/flashed against physical hardware in this environment - please
   build against your exact CMSIS device header and confirm on a scope/
   logic analyzer before relying on it in production.
 - The I2C peripheral on STM32F4 has well-documented errata around single-
@@ -98,5 +98,5 @@ To port:
   (well above the errata's affected N=1/N=2 cases), so it should be clear
   of those specific issues, but always confirm against the errata sheet
   for your exact part number/silicon revision.
-- No FIFO/multi-sample buffering is implemented — each `MPU6050_StartRead()`
+- No FIFO/multi-sample buffering is implemented - each `MPU6050_StartRead()`
   overwrites the previous sample once the new one completes.
