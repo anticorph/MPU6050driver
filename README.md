@@ -27,8 +27,8 @@ DMA1 Stream6 for I2C1_TX).
 
 | MPU-6050 pin | STM32 pin | Notes                                |
 |--------------|-----------|---------------------------------------|
-| VCC          | 3.3V      |                                        |
-| GND          | GND       |                                        |
+| VCC          | 3.3V      | Power Supply                           |
+| GND          | GND       | Ground                                 |
 | SCL          | PB6       | I2C1_SCL, AF4, open-drain              |
 | SDA          | PB7       | I2C1_SDA, AF4, open-drain              |
 | AD0          | GND       | sets 7-bit address to `0x68`           |
